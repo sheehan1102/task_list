@@ -1,0 +1,20 @@
+---
+Josh:
+- !ruby/object:Task
+  content: Wash the car
+  complete: false
+  created_at: 2015-10-21 18:55:35.468805000 +02:00
+  updated_at: 
+  id: 8
+- !ruby/object:Task
+  content: Build house
+  complete: false
+  created_at: 2015-10-21 18:58:31.785057000 +02:00
+  updated_at: 
+  id: 9
+- !ruby/object:Task
+  content: my new task
+  complete: false
+  created_at: 2015-10-21 19:01:29.064579000 +02:00
+  updated_at: 
+  id: 10

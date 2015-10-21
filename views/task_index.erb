@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Task List</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css"
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h1>Tasks</h1>
+				<p>These are my tasks to complete:
+				<ul>
+					<% if @tasks.size > 0 %>
+						<% @tasks.each do |task| %>
+							<li>
+								<p>
+									<%= task.content %> | 
+									<% if task.complete? %>
+										Done and done! | 
+									<% else %>
+										  <a href="/complete_task/<%= task.id %>">complete</a> | 
+									<% end %>
+									<a href="/delete_task/<%= task.id %>">Delete task</a>
+								</p>
+							</li>
+						<% end %>
+					<% end %>
+				</ul>
+
+				<p><a href="new_task">Create a new task.</a></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
